@@ -1,0 +1,11 @@
+{
+  "builds": [{
+    "src": "MyProject/wsgi",
+    "use": "@vercel/python",
+    "config": {"maxLamdaSize":  "15mb", "runtime": "python3.9"}
+  }],
+  "routes": [{
+    "src": "/(.*)",
+    "dest": "MyProject/wsgi.py"
+  }]
+}
